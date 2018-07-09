@@ -149,7 +149,6 @@ func (msg *OpenRequest) decode(r io.Reader) (err error) {
 		return err
 	}
 
-	// !!!! Здесь нужно посмотреть как проверять
 	msg.Interface = string(iface)
 	return
 }
@@ -172,16 +171,19 @@ const (
 	// Enables promiscuous mode (default: disabled)
 	FlagStartCapturePromisc uint16 = 1
 
-	// Use a datagram (i.e. UDP) connection for the data stream (default: use TCP)
+	// Use a datagram (i.e. UDP) connection for the data stream
+	// (default: use TCP)
 	FlagStartCaptureDgram uint16 = 2
 
 	// The server has to open the data connection toward the client
 	FlagStartCaptureServerOpen uint16 = 4
 
-	// Capture only inbound packets (take care: the flag has no effects with promiscuous enabled)
+	// Capture only inbound packets
+	// (take care: the flag has no effects with promiscuous enabled)
 	FlagStartCaptureInbound uint16 = 8
 
-	// Capture only outbound packets (take care: the flag has no effects with promiscuous enabled)
+	// Capture only outbound packets
+	// (take care: the flag has no effects with promiscuous enabled)
 	FlagStartCaptureOutbound uint16 = 16
 )
 
