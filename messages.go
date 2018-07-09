@@ -149,7 +149,6 @@ func (msg *OpenRequest) decode(r io.Reader) (err error) {
 		return err
 	}
 
-	// !!!! Здесь нужно посмотреть как проверять
 	msg.Interface = string(iface)
 	return
 }
